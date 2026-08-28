@@ -20,6 +20,9 @@ classifiers = [
 ]
 dependencies = []
 
+[project.optional-dependencies]
+test = ["jsonschema==4.25.1"]
+
 [project.urls]
 Repository = "https://github.com/mohsamir7122/new-kuwait-"
 

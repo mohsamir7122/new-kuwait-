@@ -15,7 +15,14 @@ CORE_CAPABILITIES = (
     "effective_dated_identity",
     "evidence_hashing",
     "liquidity_constraints",
+    "official_data_parsing",
+    "outcome_evidence_validation",
     "point_in_time_event_features",
+    "portfolio_state_validation",
+    "research_price_history_validation",
+    "runtime_trust_verification",
+    "source_resilience_policy",
+    "trading_status_history",
     "temporal_leakage_guards",
 )
 

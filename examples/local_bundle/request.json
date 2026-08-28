@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "analysis_id": "synthetic-example-001",
+  "decision_at": "2026-08-24T15:00:00+03:00",
+  "capture_mode": "PROSPECTIVE",
+  "identity": {
+    "security_code": "101",
+    "ticker": "TEST",
+    "isin": "KW0000000001",
+    "name_ar": "مثال اصطناعي",
+    "name_en": "Synthetic Example",
+    "board": "cash",
+    "market_segment": "MAIN",
+    "currency": "KWD",
+    "valid_from": "2020-01-01",
+    "valid_to": null,
+    "listing_status": "TRADING",
+    "evidence_sha256": "53ffdbf57b32352938afa292b87dac5044f92b784c083513d549beeffc2b330b"
+  },
+  "evidence": [
+    {
+      "path": "raw/evidence.txt",
+      "sha256": "53ffdbf57b32352938afa292b87dac5044f92b784c083513d549beeffc2b330b"
+    }
+  ],
+  "prices": [
+    {"date": "2026-08-20", "close_fils": 100, "volume": 1000, "turnover_kwd": 100, "evidence_sha256": "53ffdbf57b32352938afa292b87dac5044f92b784c083513d549beeffc2b330b"},
+    {"date": "2026-08-21", "close_fils": 102, "volume": 1100, "turnover_kwd": 112.2, "evidence_sha256": "53ffdbf57b32352938afa292b87dac5044f92b784c083513d549beeffc2b330b"},
+    {"date": "2026-08-22", "close_fils": 101, "volume": 900, "turnover_kwd": 90.9, "evidence_sha256": "53ffdbf57b32352938afa292b87dac5044f92b784c083513d549beeffc2b330b"},
+    {"date": "2026-08-23", "close_fils": 103, "volume": 1200, "turnover_kwd": 123.6, "evidence_sha256": "53ffdbf57b32352938afa292b87dac5044f92b784c083513d549beeffc2b330b"},
+    {"date": "2026-08-24", "close_fils": 105, "volume": 1500, "turnover_kwd": 157.5, "evidence_sha256": "53ffdbf57b32352938afa292b87dac5044f92b784c083513d549beeffc2b330b"}
+  ],
+  "events": [
+    {
+      "event_id": "event-1",
+      "security_code": "101",
+      "source_id": "issuer",
+      "source_role": "ISSUER_PRIMARY",
+      "event_type": "CONTRACT",
+      "direction": "POSITIVE",
+      "novelty": 0.8,
+      "event_at": "2026-08-23T10:00:00+03:00",
+      "published_at": "2026-08-23T10:00:00+03:00",
+      "first_available_at": "2026-08-23T10:00:00+03:00",
+      "captured_at": "2026-08-23T11:00:00+03:00",
+      "content_hash": "53ffdbf57b32352938afa292b87dac5044f92b784c083513d549beeffc2b330b",
+      "evidence_hash": "53ffdbf57b32352938afa292b87dac5044f92b784c083513d549beeffc2b330b",
+      "relation_type": "STANDALONE",
+      "original_event_id": null,
+      "raw_text": "synthetic event"
+    }
+  ],
+  "fundamentals": {
+    "current": {"revenue": 120, "net_income": 20, "operating_cash_flow": 25, "total_debt": 30, "equity": 100},
+    "prior": {"revenue": 100, "net_income": 10, "operating_cash_flow": 8, "total_debt": 40, "equity": 90},
+    "evidence_sha256s": ["53ffdbf57b32352938afa292b87dac5044f92b784c083513d549beeffc2b330b"]
+  },
+  "sentiment": [
+    {"origin_id": "origin-1", "author_id": "author-1", "tone": 0.8, "author_reliability": 0.7, "evidence_sha256": "53ffdbf57b32352938afa292b87dac5044f92b784c083513d549beeffc2b330b"},
+    {"origin_id": "origin-2", "author_id": "author-2", "tone": 0.5, "author_reliability": 0.6, "evidence_sha256": "53ffdbf57b32352938afa292b87dac5044f92b784c083513d549beeffc2b330b"}
+  ]
+}

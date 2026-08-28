@@ -1,0 +1,2686 @@
+{
+  "baseline": {
+    "broad_exception_handlers": 7,
+    "compileall": "PASS",
+    "defined_only_sources": 69,
+    "fixture_only_end_to_end_sources": 2,
+    "live_operational_sources": 0,
+    "secret_guard": "PASS",
+    "smoke_check": "PASS",
+    "tests_passed": 2512,
+    "tests_run": 2512
+  },
+  "branches": [
+    {
+      "disposition": "EXCLUDED_LEGACY_BOOTSTRAP_SCOPE",
+      "focused_tests": 34,
+      "head": "b9145b2",
+      "refs": [
+        "origin/agent/bootstrap-archive-v0.1"
+      ],
+      "test_status": "PASS"
+    },
+    {
+      "disposition": "EXCLUDED_STALE_LIVE_COLLECTION",
+      "focused_tests": 58,
+      "head": "d0bf6ff",
+      "refs": [
+        "origin/agent/final-price-collection-test"
+      ],
+      "test_status": "PASS"
+    },
+    {
+      "disposition": "REJECTED_TEST_FAILURE",
+      "focused_tests": 28,
+      "head": "7a74058",
+      "passing_tests": 26,
+      "reason": "two expectations preserve misspelled STARTD values while runtime emits STARTED",
+      "refs": [
+        "origin/agent/humansoft-event-factor-panel-v1"
+      ],
+      "test_status": "FAIL"
+    },
+    {
+      "disposition": "SUPERSEDED_BY_MAIN",
+      "focused_tests": 22,
+      "head": "6aa50ac",
+      "refs": [
+        "origin/agent/ku-bo-015-source-access-recipes"
+      ],
+      "test_status": "PASS"
+    },
+    {
+      "disposition": "SUPERSEDED_BY_MAIN",
+      "focused_tests": 43,
+      "head": "6e9ab87",
+      "refs": [
+        "origin/agent/ku-bo-016-codex-live-bootstrap"
+      ],
+      "test_status": "PASS"
+    },
+    {
+      "disposition": "SUPERSEDED_BY_MAIN",
+      "focused_tests": 72,
+      "head": "d71314e",
+      "refs": [
+        "origin/agent/ku-bo-017-live-dry-run-orchestrator"
+      ],
+      "test_status": "PASS"
+    },
+    {
+      "disposition": "SUPERSEDED_BY_MAIN",
+      "focused_tests": 14,
+      "head": "459fb45",
+      "refs": [
+        "origin/agent/private-predecessor-capability-migration-v1"
+      ],
+      "test_status": "PASS"
+    },
+    {
+      "disposition": "SUPERSEDED_BY_FINAL_PRICE_BRANCH",
+      "focused_tests": 4,
+      "head": "a71af92",
+      "refs": [
+        "origin/agent/staged-live-limited"
+      ],
+      "test_status": "PASS"
+    },
+    {
+      "disposition": "EXCLUDED_ALTERNATE_CHECKPOINT_DESIGN",
+      "focused_tests": 34,
+      "head": "a957f9c",
+      "refs": [
+        "origin/codex/checkpoint-v2-alternate-preservation-20260828"
+      ],
+      "test_status": "PASS"
+    },
+    {
+      "disposition": "EXCLUDED_CANARY_WITHOUT_LIVE_RUNTIME",
+      "focused_tests": 49,
+      "head": "630f929",
+      "refs": [
+        "origin/codex/ku-bo-readiness-live-canary-v1"
+      ],
+      "test_status": "PASS"
+    },
+    {
+      "disposition": "EXCLUDED_CHECKPOINT_WITHOUT_LIVE_RUNTIME",
+      "focused_tests": 56,
+      "head": "eb7a81f",
+      "reason": "two branch refs point to the same head",
+      "refs": [
+        "origin/codex/kuwait-hybrid-full-market-collection-v1",
+        "origin/codex/one-security-checkpoint-v2"
+      ],
+      "test_status": "PASS"
+    }
+  ],
+  "component_audit_complete": true,
+  "disposition_counts": {
+    "EXCLUDED_HISTORICAL_DOCUMENT": 76,
+    "EXCLUDED_LEGACY_ROOT": 8,
+    "EXCLUDED_LEGACY_RUNTIME_CONFIG": 32,
+    "EXCLUDED_LEGACY_SCOPE": 32,
+    "EXCLUDED_NON_RUNTIME_ARTIFACT": 42,
+    "EXCLUDED_NO_LIVE_SOURCE_EVIDENCE": 17,
+    "EXCLUDED_OPERATIONAL_OVERHEAD": 14,
+    "EXCLUDED_OPERATIONAL_SCRIPT": 11,
+    "EXCLUDED_SYNTHETIC_ONLY": 2,
+    "EXCLUDED_UNVALIDATED_PREDICTIVE_PATH": 14,
+    "EXCLUDED_WITH_LEGACY_COMPONENT": 207,
+    "MIGRATED": 41,
+    "MIGRATED_PARTIAL": 1,
+    "REPLACED": 12
+  },
+  "files": [
+    {
+      "disposition": "EXCLUDED_NON_RUNTIME_ARTIFACT",
+      "path": ".agents/skills/operate-ku-bo-research/SKILL.md",
+      "reason": "fixture, research note, workout, artifact, or legacy skill"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_ROOT",
+      "path": ".env.example",
+      "reason": "legacy repository-control file is not part of the clean runtime"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_ROOT",
+      "path": ".gitattributes",
+      "reason": "legacy repository-control file is not part of the clean runtime"
+    },
+    {
+      "disposition": "REPLACED",
+      "path": ".github/workflows/ci.yml",
+      "reason": "legacy operational workflows replaced by one bounded CI workflow"
+    },
+    {
+      "disposition": "REPLACED",
+      "path": ".github/workflows/daily-shadow.yml",
+      "reason": "legacy operational workflows replaced by one bounded CI workflow"
+    },
+    {
+      "disposition": "REPLACED",
+      "path": ".github/workflows/kuwait-market-ai.yml",
+      "reason": "legacy operational workflows replaced by one bounded CI workflow"
+    },
+    {
+      "disposition": "REPLACED",
+      "path": ".github/workflows/kuwait-market-pipeline.yml",
+      "reason": "legacy operational workflows replaced by one bounded CI workflow"
+    },
+    {
+      "disposition": "REPLACED",
+      "path": ".github/workflows/recovery-controller.yml",
+      "reason": "legacy operational workflows replaced by one bounded CI workflow"
+    },
+    {
+      "disposition": "REPLACED",
+      "path": ".gitignore",
+      "reason": "root metadata rebuilt for the clean repository"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_ROOT",
+      "path": "AGENTS.md",
+      "reason": "legacy repository-control file is not part of the clean runtime"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_ROOT",
+      "path": "CODEX_START_HERE.md",
+      "reason": "legacy repository-control file is not part of the clean runtime"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_ROOT",
+      "path": "CONTRIBUTING.md",
+      "reason": "legacy repository-control file is not part of the clean runtime"
+    },
+    {
+      "disposition": "MIGRATED",
+      "path": "LICENSE",
+      "reason": "root policy retained"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_ROOT",
+      "path": "NEXT_ACTIONS.md",
+      "reason": "legacy repository-control file is not part of the clean runtime"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_ROOT",
+      "path": "PROGRESS.json",
+      "reason": "legacy repository-control file is not part of the clean runtime"
+    },
+    {
+      "disposition": "REPLACED",
+      "path": "README.md",
+      "reason": "root metadata rebuilt for the clean repository"
+    },
+    {
+      "disposition": "MIGRATED",
+      "path": "SECURITY.md",
+      "reason": "root policy retained"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_ROOT",
+      "path": "STATUS.md",
+      "reason": "legacy repository-control file is not part of the clean runtime"
+    },
+    {
+      "disposition": "EXCLUDED_NON_RUNTIME_ARTIFACT",
+      "path": "artifacts/README.md",
+      "reason": "fixture, research note, workout, artifact, or legacy skill"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_RUNTIME_CONFIG",
+      "path": "config/codex_live_bootstrap.json",
+      "reason": "clean core has no network or scheduled runtime configuration"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_RUNTIME_CONFIG",
+      "path": "config/drive_price_collection_pilot.example.json",
+      "reason": "clean core has no network or scheduled runtime configuration"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_RUNTIME_CONFIG",
+      "path": "config/execution-priority-policy.json",
+      "reason": "clean core has no network or scheduled runtime configuration"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_RUNTIME_CONFIG",
+      "path": "config/historical_research_layers.json",
+      "reason": "clean core has no network or scheduled runtime configuration"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_RUNTIME_CONFIG",
+      "path": "config/historical_sources.json",
+      "reason": "clean core has no network or scheduled runtime configuration"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_RUNTIME_CONFIG",
+      "path": "config/issuer_sequential_collection_policy.json",
+      "reason": "clean core has no network or scheduled runtime configuration"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_RUNTIME_CONFIG",
+      "path": "config/ku_bo_018_event_admission_task.json",
+      "reason": "clean core has no network or scheduled runtime configuration"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_RUNTIME_CONFIG",
+      "path": "config/ku_bo_live_program.json",
+      "reason": "clean core has no network or scheduled runtime configuration"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_RUNTIME_CONFIG",
+      "path": "config/kuwait_automation_schedule.json",
+      "reason": "clean core has no network or scheduled runtime configuration"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_RUNTIME_CONFIG",
+      "path": "config/market_scope.json",
+      "reason": "clean core has no network or scheduled runtime configuration"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_RUNTIME_CONFIG",
+      "path": "config/methods.json",
+      "reason": "clean core has no network or scheduled runtime configuration"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_RUNTIME_CONFIG",
+      "path": "config/pilot/benchmark_registry.json",
+      "reason": "clean core has no network or scheduled runtime configuration"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_RUNTIME_CONFIG",
+      "path": "config/pilot/outcome_session_policy.json",
+      "reason": "clean core has no network or scheduled runtime configuration"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_RUNTIME_CONFIG",
+      "path": "config/pilot/security_master_seed.json",
+      "reason": "clean core has no network or scheduled runtime configuration"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_RUNTIME_CONFIG",
+      "path": "config/pilot/tri_security_batches.json",
+      "reason": "clean core has no network or scheduled runtime configuration"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_RUNTIME_CONFIG",
+      "path": "config/pilot/tri_security_vendor_mappings.json",
+      "reason": "clean core has no network or scheduled runtime configuration"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_RUNTIME_CONFIG",
+      "path": "config/pilot/vendor_symbol_mappings.json",
+      "reason": "clean core has no network or scheduled runtime configuration"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_RUNTIME_CONFIG",
+      "path": "config/predecessor_capability_parity.json",
+      "reason": "clean core has no network or scheduled runtime configuration"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_RUNTIME_CONFIG",
+      "path": "config/products.json",
+      "reason": "clean core has no network or scheduled runtime configuration"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_RUNTIME_CONFIG",
+      "path": "config/recovery-policy.json",
+      "reason": "clean core has no network or scheduled runtime configuration"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_RUNTIME_CONFIG",
+      "path": "config/research_policies.json",
+      "reason": "clean core has no network or scheduled runtime configuration"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_RUNTIME_CONFIG",
+      "path": "config/research_source_registry.json",
+      "reason": "clean core has no network or scheduled runtime configuration"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_RUNTIME_CONFIG",
+      "path": "config/research_workflows.json",
+      "reason": "clean core has no network or scheduled runtime configuration"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_RUNTIME_CONFIG",
+      "path": "config/rights-aware-backfill-policy.json",
+      "reason": "clean core has no network or scheduled runtime configuration"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_RUNTIME_CONFIG",
+      "path": "config/saudi-deferred-design-gates.json",
+      "reason": "clean core has no network or scheduled runtime configuration"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_RUNTIME_CONFIG",
+      "path": "config/source_access_recipes.json",
+      "reason": "clean core has no network or scheduled runtime configuration"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_RUNTIME_CONFIG",
+      "path": "config/source_capabilities.json",
+      "reason": "clean core has no network or scheduled runtime configuration"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_RUNTIME_CONFIG",
+      "path": "config/source_fallback_policy.json",
+      "reason": "clean core has no network or scheduled runtime configuration"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_RUNTIME_CONFIG",
+      "path": "config/source_network.json",
+      "reason": "clean core has no network or scheduled runtime configuration"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_RUNTIME_CONFIG",
+      "path": "config/source_quality_policy.json",
+      "reason": "clean core has no network or scheduled runtime configuration"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_RUNTIME_CONFIG",
+      "path": "config/source_query_strategies.json",
+      "reason": "clean core has no network or scheduled runtime configuration"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_RUNTIME_CONFIG",
+      "path": "config/sources.json",
+      "reason": "clean core has no network or scheduled runtime configuration"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/ADAPTIVE_RESEARCH_OPERATING_MODEL_AR.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/ARCHITECTURE_AR.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/AUTOMATION_SCHEDULE_AR.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/BENCHMARK_OFFICIAL_EOD_V0_2_AR.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/BUILD_STATUS_AR.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/CA_ENRICHMENT_AND_STATUS_HISTORY_V0_2_AR.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/CODEX_LIVE_HANDOFF_AR.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/COMPANY_DOSSIER_AR.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/CURRENT_DATA_FOUNDATION_STATUS_AR.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/DATA_CONTRACTS_AR.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/DATA_FOUNDATION_V0_2_AR.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/FACTOR9_DRIVE_ADMISSION_AR.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/ISSUE_24_INTEGRATION_MAP.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/KUWAIT_120D_NEXT_SESSION_AR.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/KUWAIT_HISTORICAL_KNOWLEDGE_AR.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/KU_BO_011_ADVERSARIAL_TEST_PACK_AR.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/KU_BO_017_LIVE_DRY_RUN_AR.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/MIGRATION_AR.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/OFFICIAL_IDENTITY_AND_CALENDAR_V0_2_AR.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/OPERATIONS_AR.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/PROJECT_CONVERSATION_SYNTHESIS_AR.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/PROJECT_KNOWLEDGE_BASE.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/RECOVERY_AND_RESUME_AR.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/RELATED_REPOSITORY_AUDIT_2026_08_12_AR.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/RESEARCH_METHOD_FOUNDATIONS_AR.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/SECURITY_BY_SECURITY_COLLECTION_AR.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/SECURITY_STATUS_AND_CORPORATE_ACTIONS_V0_2_AR.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/SOURCE_ACCESS_RECIPES_AR.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/SOURCE_EVIDENCE_LIFECYCLE_AR.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/SOURCE_NETWORK_REPLACEMENT_AR.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/SOURCE_POLICY_AR.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/TRI_SECURITY_PILOT_V0_3_AR.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/TRI_SECURITY_RUN_RECEIPT_V0_1_AR.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/V3_1_HARDENING_AR.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/codex/ACCEPTANCE_GATES.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/codex/AI_REBUILD_RUNTIME_MANIFEST.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/codex/CONVERSATION_IMPORT_POLICY.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/codex/CURRENT_STATUS.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/codex/CURRENT_TASK.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/codex/HANDOFF_TEMPLATE.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/codex/PRIVATE_PREDECESSOR_MIGRATION_EXECPLAN.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/codex/PROJECT_RULES.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/codex/PROMPT_TEMPLATES.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/codex/USER_DECISIONS.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/codex/backlog/KU-BO-017-live-dry-run-orchestrator.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/codex/backlog/KU-BO-2026-08-26-INTEGRATION-completed.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/codex/decisions/KU-BO-017-D01.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/codex/handoffs/KU-BO-008-result.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/codex/handoffs/KU-BO-009-result.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/codex/handoffs/KU-BO-010-result.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/codex/handoffs/KU-BO-011-result.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/codex/handoffs/KU-BO-012-result.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/codex/handoffs/KU-BO-013-result.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/codex/handoffs/KU-BO-013-review-followup-result.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/codex/handoffs/KU-BO-015-result.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/codex/handoffs/KU-BO-016-result.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/codex/handoffs/KU-BO-017-result.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/codex/handoffs/KU-BO-2026-08-26-INTEGRATION-result.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/codex/handoffs/KU-BO-2026-08-27-DAY1-result.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/codex/migrations/kuwait-integration-capability-map-2026-08-26.json",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/codex/migrations/market-ai-2026-08-27/capability-matrix.json",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/codex/migrations/market-ai-2026-08-27/integration-plan.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/codex/migrations/market-ai-2026-08-27/repository-capability-audit.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/codex/migrations/private-predecessor-to-ku-bo/PRIVATE_SOURCE_ORIENTATION.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/codex/migrations/private-predecessor-to-ku-bo/STATUS.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/codex/migrations/private-predecessor-to-ku-bo/capability-parity.json",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/codex/migrations/private-predecessor-to-ku-bo/manifest.json",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/codex/migrations/private-predecessor-to-ku-bo/migration-control.json",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/legacy_v2/ARCHITECTURE_AR.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/legacy_v2/BUILD_STATUS_AR.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/legacy_v2/DATA_CONTRACTS_AR.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/legacy_v2/DEEP_AUDIT_AR.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/legacy_v2/MIGRATION_AR.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/legacy_v2/OPERATIONS_AR.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/legacy_v2/RESEARCH_COMPARISON_AR.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_HISTORICAL_DOCUMENT",
+      "path": "docs/legacy_v2/SOURCE_POLICY_AR.md",
+      "reason": "legacy status and handoff documents are not runtime truth"
+    },
+    {
+      "disposition": "EXCLUDED_NON_RUNTIME_ARTIFACT",
+      "path": "examples/analysis_request.json",
+      "reason": "fixture, research note, workout, artifact, or legacy skill"
+    },
+    {
+      "disposition": "EXCLUDED_NON_RUNTIME_ARTIFACT",
+      "path": "examples/capture_plan.json",
+      "reason": "fixture, research note, workout, artifact, or legacy skill"
+    },
+    {
+      "disposition": "EXCLUDED_NON_RUNTIME_ARTIFACT",
+      "path": "examples/investing_user_exports/README.md",
+      "reason": "fixture, research note, workout, artifact, or legacy skill"
+    },
+    {
+      "disposition": "EXCLUDED_NON_RUNTIME_ARTIFACT",
+      "path": "examples/price_file_collection_manifest_template.csv",
+      "reason": "fixture, research note, workout, artifact, or legacy skill"
+    },
+    {
+      "disposition": "EXCLUDED_NON_RUNTIME_ARTIFACT",
+      "path": "examples/synthetic_company_dossier.json",
+      "reason": "fixture, research note, workout, artifact, or legacy skill"
+    },
+    {
+      "disposition": "EXCLUDED_NON_RUNTIME_ARTIFACT",
+      "path": "examples/synthetic_issuer_universe.json",
+      "reason": "fixture, research note, workout, artifact, or legacy skill"
+    },
+    {
+      "disposition": "EXCLUDED_NON_RUNTIME_ARTIFACT",
+      "path": "examples/synthetic_source_evidence_lifecycle.json",
+      "reason": "fixture, research note, workout, artifact, or legacy skill"
+    },
+    {
+      "disposition": "EXCLUDED_NON_RUNTIME_ARTIFACT",
+      "path": "examples/synthetic_source_network_run/findings.jsonl",
+      "reason": "fixture, research note, workout, artifact, or legacy skill"
+    },
+    {
+      "disposition": "EXCLUDED_NON_RUNTIME_ARTIFACT",
+      "path": "examples/synthetic_source_network_run/manifest.json",
+      "reason": "fixture, research note, workout, artifact, or legacy skill"
+    },
+    {
+      "disposition": "EXCLUDED_NON_RUNTIME_ARTIFACT",
+      "path": "examples/synthetic_source_network_run/raw/00_tradingview_screeners.json",
+      "reason": "fixture, research note, workout, artifact, or legacy skill"
+    },
+    {
+      "disposition": "EXCLUDED_NON_RUNTIME_ARTIFACT",
+      "path": "examples/synthetic_source_network_run/raw/01_investing_history.json",
+      "reason": "fixture, research note, workout, artifact, or legacy skill"
+    },
+    {
+      "disposition": "EXCLUDED_NON_RUNTIME_ARTIFACT",
+      "path": "examples/synthetic_source_network_run/raw/02_reuters_middle_east.json",
+      "reason": "fixture, research note, workout, artifact, or legacy skill"
+    },
+    {
+      "disposition": "EXCLUDED_NON_RUNTIME_ARTIFACT",
+      "path": "examples/synthetic_source_network_run/raw/03_telegram_kuwaitstockex.json",
+      "reason": "fixture, research note, workout, artifact, or legacy skill"
+    },
+    {
+      "disposition": "EXCLUDED_NON_RUNTIME_ARTIFACT",
+      "path": "examples/synthetic_source_network_run/raw/04_kuna.json",
+      "reason": "fixture, research note, workout, artifact, or legacy skill"
+    },
+    {
+      "disposition": "EXCLUDED_NON_RUNTIME_ARTIFACT",
+      "path": "examples/synthetic_source_network_run/raw/05_boursa_disclosure_archive.json",
+      "reason": "fixture, research note, workout, artifact, or legacy skill"
+    },
+    {
+      "disposition": "EXCLUDED_NON_RUNTIME_ARTIFACT",
+      "path": "examples/synthetic_source_network_run/raw/06_boursa_current.json",
+      "reason": "fixture, research note, workout, artifact, or legacy skill"
+    },
+    {
+      "disposition": "EXCLUDED_NON_RUNTIME_ARTIFACT",
+      "path": "examples/synthetic_source_network_run/research_run.json",
+      "reason": "fixture, research note, workout, artifact, or legacy skill"
+    },
+    {
+      "disposition": "EXCLUDED_NON_RUNTIME_ARTIFACT",
+      "path": "examples/synthetic_source_network_run/source_observations.json",
+      "reason": "fixture, research note, workout, artifact, or legacy skill"
+    },
+    {
+      "disposition": "EXCLUDED_NON_RUNTIME_ARTIFACT",
+      "path": "examples/synthetic_source_network_run/universe.json",
+      "reason": "fixture, research note, workout, artifact, or legacy skill"
+    },
+    {
+      "disposition": "REPLACED",
+      "path": "pyproject.toml",
+      "reason": "root metadata rebuilt for the clean repository"
+    },
+    {
+      "disposition": "EXCLUDED_NON_RUNTIME_ARTIFACT",
+      "path": "research/competitor_registry.json",
+      "reason": "fixture, research note, workout, artifact, or legacy skill"
+    },
+    {
+      "disposition": "EXCLUDED_NON_RUNTIME_ARTIFACT",
+      "path": "research/manual_access_notes_2026-08-07.json",
+      "reason": "fixture, research note, workout, artifact, or legacy skill"
+    },
+    {
+      "disposition": "EXCLUDED_NON_RUNTIME_ARTIFACT",
+      "path": "research/methodology_registry.json",
+      "reason": "fixture, research note, workout, artifact, or legacy skill"
+    },
+    {
+      "disposition": "EXCLUDED_NON_RUNTIME_ARTIFACT",
+      "path": "research/official_rules_registry.json",
+      "reason": "fixture, research note, workout, artifact, or legacy skill"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/README.md",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/analysis-request.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/benchmark-evidence-manifest.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/benchmark-history-manifest.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/benchmark-history.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/benchmark-import-report.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/benchmark-registry.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/ca-enrichment-import-report.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/ca-enrichment-manifest.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/capture-plan.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/champion-freeze-manifest.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/codex-live-bootstrap.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/company-annual-history.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/company-dossier-validation-report.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/company-dossier.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/context-event.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/corporate-action-factor-ledger.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/corporate-action-schedule.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/daily-market-totals.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/data-foundation-gate-report.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/data-foundation-packet.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/data-quality-report.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/execution-order-ledger.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/execution-priority-policy.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/factor-snapshot.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/factor9-admission-manifest.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/finding.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/forecast-readiness.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/forty-session-replay-result.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/forty-session-replay.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/historical-event-record.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/historical-research-plan.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/issuer-sequential-collection-plan.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/issuer-sequential-collection-policy.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/issuer-sequential-collection-run.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/issuer-universe.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/ku-bo-018-task.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/ku-bo-live-program.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/kuwait-automation-schedule.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/live-dry-run-contract.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/live-dry-run-receipt.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/live-dry-run-report.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/live-dry-run-sealed-output.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/live-source-probe.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/market-scope.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/network-manifest.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/official-daily-eod.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/official-eod-evidence-manifest.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/official-eod-import-report.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/official-eod-manifest.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/official-eod-validation-report.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/official-foundation-import-report.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/official-foundation-manifest.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/official-identity-report.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "MIGRATED",
+      "path": "schemas/outcome-evidence-manifest.schema.json",
+      "reason": "schema belongs to an accepted component"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/outcome-session-policy.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/parsed-research-inputs.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/parser-plan.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/portfolio-state.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "MIGRATED",
+      "path": "schemas/portfolio-validation-report.schema.json",
+      "reason": "schema belongs to an accepted component"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/predecessor-capability-parity.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/priority-checkpoint.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/recovery-incident.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/research-network-run.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/research-observation.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/research-price-history.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/research-run.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/research-source-registry.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/research-workflow.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/rights-aware-backfill-manifest.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/rights-aware-backfill-policy.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/rights-aware-blocked-record.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/rights-aware-coverage-report.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/rights-aware-source-attempt.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "MIGRATED",
+      "path": "schemas/runtime-trust-registry.schema.json",
+      "reason": "schema belongs to an accepted component"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/saudi-deferred-design-gates.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/security-exposure.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/security-status-evidence.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/source-access-probe-plan.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/source-access-recipes.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/source-attempt.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/source-capabilities.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/source-evidence-lifecycle.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/source-evidence-reconciliation-report.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/source-fallback-policy.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/source-fallback-report.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/source-fallback-request.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/source-observations.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/source-quality-policy.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/source-search-run.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/status-corporate-import-report.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/status-corporate-manifest.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/status-history-import-report.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/status-history-manifest.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/status-intervals.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/trading-calendar-report.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/tri-security-batch-plan.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/tri-security-output-lineage.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/tri-security-pilot-registry.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/tri-security-run-receipt.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/tri-security-scoped-config-manifest.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/tri-security-semantic-admission.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/tri-security-stage-binding.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/tri-security-vendor-mappings.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/tri-security-workspace-report.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/universe.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/vendor-symbol-mapping.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "schemas/verified-zero-result-receipt.schema.json",
+      "reason": "schema belongs to an excluded legacy contract"
+    },
+    {
+      "disposition": "EXCLUDED_OPERATIONAL_SCRIPT",
+      "path": "scripts/audit_ku_bo_011_corpus.py",
+      "reason": "legacy control script is outside the accepted runtime"
+    },
+    {
+      "disposition": "EXCLUDED_OPERATIONAL_SCRIPT",
+      "path": "scripts/backfill_90d.py",
+      "reason": "legacy control script is outside the accepted runtime"
+    },
+    {
+      "disposition": "EXCLUDED_OPERATIONAL_SCRIPT",
+      "path": "scripts/codex_control_check.py",
+      "reason": "legacy control script is outside the accepted runtime"
+    },
+    {
+      "disposition": "EXCLUDED_OPERATIONAL_SCRIPT",
+      "path": "scripts/generate_ku_bo_011_corpus.py",
+      "reason": "legacy control script is outside the accepted runtime"
+    },
+    {
+      "disposition": "EXCLUDED_OPERATIONAL_SCRIPT",
+      "path": "scripts/installed_data_foundation_check.py",
+      "reason": "legacy control script is outside the accepted runtime"
+    },
+    {
+      "disposition": "EXCLUDED_OPERATIONAL_SCRIPT",
+      "path": "scripts/recovery_controller.py",
+      "reason": "legacy control script is outside the accepted runtime"
+    },
+    {
+      "disposition": "EXCLUDED_OPERATIONAL_SCRIPT",
+      "path": "scripts/secret_guard.py",
+      "reason": "legacy control script is outside the accepted runtime"
+    },
+    {
+      "disposition": "EXCLUDED_OPERATIONAL_SCRIPT",
+      "path": "scripts/smoke_check.py",
+      "reason": "legacy control script is outside the accepted runtime"
+    },
+    {
+      "disposition": "EXCLUDED_OPERATIONAL_SCRIPT",
+      "path": "scripts/validate_codex_live_bootstrap.py",
+      "reason": "legacy control script is outside the accepted runtime"
+    },
+    {
+      "disposition": "EXCLUDED_OPERATIONAL_SCRIPT",
+      "path": "scripts/validate_kuwait_automation_schedule.py",
+      "reason": "legacy control script is outside the accepted runtime"
+    },
+    {
+      "disposition": "EXCLUDED_OPERATIONAL_SCRIPT",
+      "path": "scripts/validate_private_predecessor_migration_control.py",
+      "reason": "legacy control script is outside the accepted runtime"
+    },
+    {
+      "disposition": "REPLACED",
+      "path": "src/kubo/__init__.py",
+      "reason": "the legacy entrypoint was replaced by the bounded clean CLI"
+    },
+    {
+      "disposition": "REPLACED",
+      "path": "src/kubo/__main__.py",
+      "reason": "the legacy entrypoint was replaced by the bounded clean CLI"
+    },
+    {
+      "disposition": "MIGRATED",
+      "path": "src/kubo/analysts.py",
+      "reason": "direct tests pass in the clean repository"
+    },
+    {
+      "disposition": "MIGRATED",
+      "path": "src/kubo/atomic_output.py",
+      "reason": "direct tests pass in the clean repository"
+    },
+    {
+      "disposition": "EXCLUDED_OPERATIONAL_OVERHEAD",
+      "path": "src/kubo/automation_schedule.py",
+      "reason": "control layer is not required by the accepted local runtime"
+    },
+    {
+      "disposition": "EXCLUDED_OPERATIONAL_OVERHEAD",
+      "path": "src/kubo/backfill_90d.py",
+      "reason": "control layer is not required by the accepted local runtime"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_SCOPE",
+      "path": "src/kubo/benchmark_history.py",
+      "reason": "not required by the accepted evidence-bound local analysis path"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_SCOPE",
+      "path": "src/kubo/benchmark_import.py",
+      "reason": "not required by the accepted evidence-bound local analysis path"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_SCOPE",
+      "path": "src/kubo/benchmark_registry.py",
+      "reason": "not required by the accepted evidence-bound local analysis path"
+    },
+    {
+      "disposition": "EXCLUDED_OPERATIONAL_OVERHEAD",
+      "path": "src/kubo/benchmark_workspace.py",
+      "reason": "control layer is not required by the accepted local runtime"
+    },
+    {
+      "disposition": "MIGRATED",
+      "path": "src/kubo/ca_adjustments.py",
+      "reason": "direct tests pass in the clean repository"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_SCOPE",
+      "path": "src/kubo/ca_enrichment_import.py",
+      "reason": "not required by the accepted evidence-bound local analysis path"
+    },
+    {
+      "disposition": "EXCLUDED_OPERATIONAL_OVERHEAD",
+      "path": "src/kubo/ca_enrichment_workspace.py",
+      "reason": "control layer is not required by the accepted local runtime"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_SCOPE",
+      "path": "src/kubo/capabilities.py",
+      "reason": "not required by the accepted evidence-bound local analysis path"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_SCOPE",
+      "path": "src/kubo/capability_parity.py",
+      "reason": "not required by the accepted evidence-bound local analysis path"
+    },
+    {
+      "disposition": "EXCLUDED_NO_LIVE_SOURCE_EVIDENCE",
+      "path": "src/kubo/capture_plan.py",
+      "reason": "legacy inventory reports zero LIVE_OPERATIONAL sources"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_SCOPE",
+      "path": "src/kubo/catalog.py",
+      "reason": "not required by the accepted evidence-bound local analysis path"
+    },
+    {
+      "disposition": "EXCLUDED_OPERATIONAL_OVERHEAD",
+      "path": "src/kubo/champion_freeze.py",
+      "reason": "control layer is not required by the accepted local runtime"
+    },
+    {
+      "disposition": "REPLACED",
+      "path": "src/kubo/cli.py",
+      "reason": "the legacy entrypoint was replaced by the bounded clean CLI"
+    },
+    {
+      "disposition": "REPLACED",
+      "path": "src/kubo/cli_v3.py",
+      "reason": "the legacy entrypoint was replaced by the bounded clean CLI"
+    },
+    {
+      "disposition": "EXCLUDED_NO_LIVE_SOURCE_EVIDENCE",
+      "path": "src/kubo/codex_live_bootstrap.py",
+      "reason": "legacy inventory reports zero LIVE_OPERATIONAL sources"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_SCOPE",
+      "path": "src/kubo/company_dossier.py",
+      "reason": "not required by the accepted evidence-bound local analysis path"
+    },
+    {
+      "disposition": "EXCLUDED_NO_LIVE_SOURCE_EVIDENCE",
+      "path": "src/kubo/connectors.py",
+      "reason": "legacy inventory reports zero LIVE_OPERATIONAL sources"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_SCOPE",
+      "path": "src/kubo/context_research.py",
+      "reason": "not required by the accepted evidence-bound local analysis path"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_SCOPE",
+      "path": "src/kubo/data_foundation_cli.py",
+      "reason": "not required by the accepted evidence-bound local analysis path"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_SCOPE",
+      "path": "src/kubo/data_foundation_reconciliation.py",
+      "reason": "not required by the accepted evidence-bound local analysis path"
+    },
+    {
+      "disposition": "EXCLUDED_UNVALIDATED_PREDICTIVE_PATH",
+      "path": "src/kubo/decisions.py",
+      "reason": "no real point-in-time performance evidence supports this path"
+    },
+    {
+      "disposition": "EXCLUDED_UNVALIDATED_PREDICTIVE_PATH",
+      "path": "src/kubo/evaluation.py",
+      "reason": "no real point-in-time performance evidence supports this path"
+    },
+    {
+      "disposition": "MIGRATED",
+      "path": "src/kubo/events.py",
+      "reason": "direct tests pass in the clean repository"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_SCOPE",
+      "path": "src/kubo/evidence.py",
+      "reason": "not required by the accepted evidence-bound local analysis path"
+    },
+    {
+      "disposition": "MIGRATED",
+      "path": "src/kubo/evidence_hashes.py",
+      "reason": "direct tests pass in the clean repository"
+    },
+    {
+      "disposition": "EXCLUDED_UNVALIDATED_PREDICTIVE_PATH",
+      "path": "src/kubo/execution.py",
+      "reason": "no real point-in-time performance evidence supports this path"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_SCOPE",
+      "path": "src/kubo/exit_status.py",
+      "reason": "not required by the accepted evidence-bound local analysis path"
+    },
+    {
+      "disposition": "EXCLUDED_OPERATIONAL_OVERHEAD",
+      "path": "src/kubo/factor9_admission.py",
+      "reason": "control layer is not required by the accepted local runtime"
+    },
+    {
+      "disposition": "MIGRATED",
+      "path": "src/kubo/features.py",
+      "reason": "direct tests pass in the clean repository"
+    },
+    {
+      "disposition": "EXCLUDED_UNVALIDATED_PREDICTIVE_PATH",
+      "path": "src/kubo/forty_session_replay.py",
+      "reason": "no real point-in-time performance evidence supports this path"
+    },
+    {
+      "disposition": "MIGRATED",
+      "path": "src/kubo/foundation_io.py",
+      "reason": "direct tests pass in the clean repository"
+    },
+    {
+      "disposition": "MIGRATED",
+      "path": "src/kubo/hashing.py",
+      "reason": "direct tests pass in the clean repository"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_SCOPE",
+      "path": "src/kubo/historical_knowledge.py",
+      "reason": "not required by the accepted evidence-bound local analysis path"
+    },
+    {
+      "disposition": "MIGRATED",
+      "path": "src/kubo/identity.py",
+      "reason": "direct tests pass in the clean repository"
+    },
+    {
+      "disposition": "EXCLUDED_NO_LIVE_SOURCE_EVIDENCE",
+      "path": "src/kubo/ingestion.py",
+      "reason": "legacy inventory reports zero LIVE_OPERATIONAL sources"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_SCOPE",
+      "path": "src/kubo/issuer_sequential_collection.py",
+      "reason": "not required by the accepted evidence-bound local analysis path"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_SCOPE",
+      "path": "src/kubo/ku_bo_011_adapter.py",
+      "reason": "not required by the accepted evidence-bound local analysis path"
+    },
+    {
+      "disposition": "EXCLUDED_NO_LIVE_SOURCE_EVIDENCE",
+      "path": "src/kubo/ku_bo_live_program.py",
+      "reason": "legacy inventory reports zero LIVE_OPERATIONAL sources"
+    },
+    {
+      "disposition": "EXCLUDED_UNVALIDATED_PREDICTIVE_PATH",
+      "path": "src/kubo/kuwait_research_pipeline.py",
+      "reason": "no real point-in-time performance evidence supports this path"
+    },
+    {
+      "disposition": "EXCLUDED_UNVALIDATED_PREDICTIVE_PATH",
+      "path": "src/kubo/ledger.py",
+      "reason": "no real point-in-time performance evidence supports this path"
+    },
+    {
+      "disposition": "MIGRATED",
+      "path": "src/kubo/liquidity.py",
+      "reason": "direct tests pass in the clean repository"
+    },
+    {
+      "disposition": "EXCLUDED_NO_LIVE_SOURCE_EVIDENCE",
+      "path": "src/kubo/live_dry_run.py",
+      "reason": "legacy inventory reports zero LIVE_OPERATIONAL sources"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_SCOPE",
+      "path": "src/kubo/market.py",
+      "reason": "not required by the accepted evidence-bound local analysis path"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_SCOPE",
+      "path": "src/kubo/market_scope.py",
+      "reason": "not required by the accepted evidence-bound local analysis path"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_SCOPE",
+      "path": "src/kubo/methods.py",
+      "reason": "not required by the accepted evidence-bound local analysis path"
+    },
+    {
+      "disposition": "EXCLUDED_UNVALIDATED_PREDICTIVE_PATH",
+      "path": "src/kubo/modelcard.py",
+      "reason": "no real point-in-time performance evidence supports this path"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_SCOPE",
+      "path": "src/kubo/official_eod_import.py",
+      "reason": "not required by the accepted evidence-bound local analysis path"
+    },
+    {
+      "disposition": "EXCLUDED_OPERATIONAL_OVERHEAD",
+      "path": "src/kubo/official_eod_workspace.py",
+      "reason": "control layer is not required by the accepted local runtime"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_SCOPE",
+      "path": "src/kubo/official_foundation_import.py",
+      "reason": "not required by the accepted evidence-bound local analysis path"
+    },
+    {
+      "disposition": "EXCLUDED_OPERATIONAL_OVERHEAD",
+      "path": "src/kubo/official_foundation_workspace.py",
+      "reason": "control layer is not required by the accepted local runtime"
+    },
+    {
+      "disposition": "MIGRATED",
+      "path": "src/kubo/official_parsers.py",
+      "reason": "direct tests pass in the clean repository"
+    },
+    {
+      "disposition": "MIGRATED",
+      "path": "src/kubo/outcome_evidence.py",
+      "reason": "direct tests pass in the clean repository"
+    },
+    {
+      "disposition": "EXCLUDED_UNVALIDATED_PREDICTIVE_PATH",
+      "path": "src/kubo/outcome_sessions.py",
+      "reason": "no real point-in-time performance evidence supports this path"
+    },
+    {
+      "disposition": "EXCLUDED_UNVALIDATED_PREDICTIVE_PATH",
+      "path": "src/kubo/pack.py",
+      "reason": "no real point-in-time performance evidence supports this path"
+    },
+    {
+      "disposition": "EXCLUDED_NO_LIVE_SOURCE_EVIDENCE",
+      "path": "src/kubo/parser_materialization.py",
+      "reason": "legacy inventory reports zero LIVE_OPERATIONAL sources"
+    },
+    {
+      "disposition": "EXCLUDED_UNVALIDATED_PREDICTIVE_PATH",
+      "path": "src/kubo/pipeline.py",
+      "reason": "no real point-in-time performance evidence supports this path"
+    },
+    {
+      "disposition": "MIGRATED",
+      "path": "src/kubo/portfolio_state.py",
+      "reason": "direct tests pass in the clean repository"
+    },
+    {
+      "disposition": "EXCLUDED_OPERATIONAL_OVERHEAD",
+      "path": "src/kubo/price_collection_workspace.py",
+      "reason": "control layer is not required by the accepted local runtime"
+    },
+    {
+      "disposition": "EXCLUDED_OPERATIONAL_OVERHEAD",
+      "path": "src/kubo/priority_runtime.py",
+      "reason": "control layer is not required by the accepted local runtime"
+    },
+    {
+      "disposition": "MIGRATED",
+      "path": "src/kubo/provenance.py",
+      "reason": "direct tests pass in the clean repository"
+    },
+    {
+      "disposition": "EXCLUDED_UNVALIDATED_PREDICTIVE_PATH",
+      "path": "src/kubo/ranker.py",
+      "reason": "no real point-in-time performance evidence supports this path"
+    },
+    {
+      "disposition": "EXCLUDED_OPERATIONAL_OVERHEAD",
+      "path": "src/kubo/recovery.py",
+      "reason": "control layer is not required by the accepted local runtime"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_SCOPE",
+      "path": "src/kubo/reporting.py",
+      "reason": "not required by the accepted evidence-bound local analysis path"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_SCOPE",
+      "path": "src/kubo/request_contracts.py",
+      "reason": "not required by the accepted evidence-bound local analysis path"
+    },
+    {
+      "disposition": "EXCLUDED_UNVALIDATED_PREDICTIVE_PATH",
+      "path": "src/kubo/research_ledger.py",
+      "reason": "no real point-in-time performance evidence supports this path"
+    },
+    {
+      "disposition": "EXCLUDED_NO_LIVE_SOURCE_EVIDENCE",
+      "path": "src/kubo/research_network.py",
+      "reason": "legacy inventory reports zero LIVE_OPERATIONAL sources"
+    },
+    {
+      "disposition": "MIGRATED",
+      "path": "src/kubo/research_price_history.py",
+      "reason": "direct tests pass in the clean repository"
+    },
+    {
+      "disposition": "EXCLUDED_UNVALIDATED_PREDICTIVE_PATH",
+      "path": "src/kubo/research_rank.py",
+      "reason": "no real point-in-time performance evidence supports this path"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_SCOPE",
+      "path": "src/kubo/research_workflow.py",
+      "reason": "not required by the accepted evidence-bound local analysis path"
+    },
+    {
+      "disposition": "MIGRATED",
+      "path": "src/kubo/runtime_trust.py",
+      "reason": "direct tests pass in the clean repository"
+    },
+    {
+      "disposition": "EXCLUDED_NO_LIVE_SOURCE_EVIDENCE",
+      "path": "src/kubo/source_access.py",
+      "reason": "legacy inventory reports zero LIVE_OPERATIONAL sources"
+    },
+    {
+      "disposition": "EXCLUDED_NO_LIVE_SOURCE_EVIDENCE",
+      "path": "src/kubo/source_access_executor.py",
+      "reason": "legacy inventory reports zero LIVE_OPERATIONAL sources"
+    },
+    {
+      "disposition": "EXCLUDED_NO_LIVE_SOURCE_EVIDENCE",
+      "path": "src/kubo/source_access_recipes.py",
+      "reason": "legacy inventory reports zero LIVE_OPERATIONAL sources"
+    },
+    {
+      "disposition": "EXCLUDED_NO_LIVE_SOURCE_EVIDENCE",
+      "path": "src/kubo/source_evidence_lifecycle.py",
+      "reason": "legacy inventory reports zero LIVE_OPERATIONAL sources"
+    },
+    {
+      "disposition": "EXCLUDED_NO_LIVE_SOURCE_EVIDENCE",
+      "path": "src/kubo/source_fallback.py",
+      "reason": "legacy inventory reports zero LIVE_OPERATIONAL sources"
+    },
+    {
+      "disposition": "EXCLUDED_NO_LIVE_SOURCE_EVIDENCE",
+      "path": "src/kubo/source_network.py",
+      "reason": "legacy inventory reports zero LIVE_OPERATIONAL sources"
+    },
+    {
+      "disposition": "EXCLUDED_NO_LIVE_SOURCE_EVIDENCE",
+      "path": "src/kubo/source_orchestrator.py",
+      "reason": "legacy inventory reports zero LIVE_OPERATIONAL sources"
+    },
+    {
+      "disposition": "EXCLUDED_NO_LIVE_SOURCE_EVIDENCE",
+      "path": "src/kubo/source_parsers.py",
+      "reason": "legacy inventory reports zero LIVE_OPERATIONAL sources"
+    },
+    {
+      "disposition": "EXCLUDED_NO_LIVE_SOURCE_EVIDENCE",
+      "path": "src/kubo/source_quality.py",
+      "reason": "legacy inventory reports zero LIVE_OPERATIONAL sources"
+    },
+    {
+      "disposition": "MIGRATED",
+      "path": "src/kubo/source_resilience.py",
+      "reason": "direct tests pass in the clean repository"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_SCOPE",
+      "path": "src/kubo/status_corporate_import.py",
+      "reason": "not required by the accepted evidence-bound local analysis path"
+    },
+    {
+      "disposition": "MIGRATED",
+      "path": "src/kubo/status_corporate_parsers.py",
+      "reason": "direct tests pass in the clean repository"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_SCOPE",
+      "path": "src/kubo/status_corporate_validation.py",
+      "reason": "not required by the accepted evidence-bound local analysis path"
+    },
+    {
+      "disposition": "EXCLUDED_OPERATIONAL_OVERHEAD",
+      "path": "src/kubo/status_corporate_workspace.py",
+      "reason": "control layer is not required by the accepted local runtime"
+    },
+    {
+      "disposition": "MIGRATED",
+      "path": "src/kubo/status_history.py",
+      "reason": "direct tests pass in the clean repository"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_SCOPE",
+      "path": "src/kubo/status_history_import.py",
+      "reason": "not required by the accepted evidence-bound local analysis path"
+    },
+    {
+      "disposition": "EXCLUDED_OPERATIONAL_OVERHEAD",
+      "path": "src/kubo/status_history_workspace.py",
+      "reason": "control layer is not required by the accepted local runtime"
+    },
+    {
+      "disposition": "EXCLUDED_UNVALIDATED_PREDICTIVE_PATH",
+      "path": "src/kubo/stopgates.py",
+      "reason": "no real point-in-time performance evidence supports this path"
+    },
+    {
+      "disposition": "MIGRATED",
+      "path": "src/kubo/strict.py",
+      "reason": "direct tests pass in the clean repository"
+    },
+    {
+      "disposition": "EXCLUDED_SYNTHETIC_ONLY",
+      "path": "src/kubo/synthetic.py",
+      "reason": "fixtures are tests, not runtime capability"
+    },
+    {
+      "disposition": "EXCLUDED_SYNTHETIC_ONLY",
+      "path": "src/kubo/synthetic_network.py",
+      "reason": "fixtures are tests, not runtime capability"
+    },
+    {
+      "disposition": "MIGRATED",
+      "path": "src/kubo/temporal_validation.py",
+      "reason": "direct tests pass in the clean repository"
+    },
+    {
+      "disposition": "EXCLUDED_OPERATIONAL_OVERHEAD",
+      "path": "src/kubo/tri_security_admission.py",
+      "reason": "control layer is not required by the accepted local runtime"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_SCOPE",
+      "path": "src/kubo/tri_security_lineage.py",
+      "reason": "not required by the accepted evidence-bound local analysis path"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_SCOPE",
+      "path": "src/kubo/tri_security_pilot.py",
+      "reason": "not required by the accepted evidence-bound local analysis path"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_SCOPE",
+      "path": "src/kubo/tri_security_receipts.py",
+      "reason": "not required by the accepted evidence-bound local analysis path"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_SCOPE",
+      "path": "src/kubo/user_price_export.py",
+      "reason": "not required by the accepted evidence-bound local analysis path"
+    },
+    {
+      "disposition": "EXCLUDED_LEGACY_SCOPE",
+      "path": "src/kubo/vendor_symbol_mapping.py",
+      "reason": "not required by the accepted evidence-bound local analysis path"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/__init__.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/backfill_90d_helpers.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/benchmark_fixture_helpers.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/corpus/ku_bo_011_case.schema.json",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/corpus/ku_bo_011_cases.jsonl",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/corpus/ku_bo_011_manifest.json",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/fixtures/parser_contract/README.md",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/fixtures/parser_contract/boursa_identity.html",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/fixtures/parser_contract/investing_history.html",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/foundation_fixture_helpers.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/helpers.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/ku_bo_011_harness.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/ku_bo_011_mutators.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/official_eod_fixture_helpers.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/outcome_session_helpers.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "MIGRATED",
+      "path": "tests/test_analysts.py",
+      "reason": "test retained in clean suite"
+    },
+    {
+      "disposition": "MIGRATED",
+      "path": "tests/test_atomic_output.py",
+      "reason": "test retained in clean suite"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_automation_schedule.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_backfill_90d.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_backfill_90d_adversarial.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_benchmark_capability_catalog.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_benchmark_history.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_benchmark_import.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_benchmark_registry.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_benchmark_workspace.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "MIGRATED",
+      "path": "tests/test_ca_adjustments.py",
+      "reason": "test retained in clean suite"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_ca_enrichment_import.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_ca_enrichment_workspace.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_capability_parity.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_capture_plan.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_catalog_pack_pipeline.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_champion_freeze.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_cli_project_root.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_cli_research_ledger.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_codex_control.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_codex_live_bootstrap.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_company_dossier.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_context_research.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_data_foundation_cli.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_data_foundation_reconciliation.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_exit_status.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_factor9_admission.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_forty_session_replay.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "MIGRATED",
+      "path": "tests/test_foundation_io.py",
+      "reason": "test retained in clean suite"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_historical_knowledge.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "MIGRATED",
+      "path": "tests/test_identity_events_features.py",
+      "reason": "test retained in clean suite"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_importer_atomic_admission.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_ingestion.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_issuer_sequential_collection.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_ku_bo_011_adversarial_corpus.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_ku_bo_011_production_adapter.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_ku_bo_live_program.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_kuwait_research_pipeline.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_kuwait_workflow_cli.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_ledger.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "MIGRATED",
+      "path": "tests/test_liquidity.py",
+      "reason": "test retained in clean suite"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_live_dry_run.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_live_probe.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_local_skill.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_market_scope.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_methodology_registry.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_official_eod_pipeline.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_official_foundation_import.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_official_foundation_workspace.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "MIGRATED",
+      "path": "tests/test_official_parsers.py",
+      "reason": "test retained in clean suite"
+    },
+    {
+      "disposition": "MIGRATED",
+      "path": "tests/test_outcome_evidence.py",
+      "reason": "test retained in clean suite"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_outcome_ledger_integration.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_outcome_session_policy.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_outcome_sessions.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "MIGRATED",
+      "path": "tests/test_portfolio_state.py",
+      "reason": "test retained in clean suite"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_price_collection_workspace.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_priority_runtime.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_priority_runtime_adversarial.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_private_predecessor_migration_control.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "MIGRATED_PARTIAL",
+      "path": "tests/test_provenance.py",
+      "reason": "pipeline-coupled test removed; six core provenance tests retained"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_rank_execution_decision_model.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_recovery.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_recovery_adversarial.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_recovery_controller.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_recovery_workflows.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_release_metadata.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_remaining_admission_wrappers.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_request_reporting.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_research_ledger.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_research_network.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "MIGRATED",
+      "path": "tests/test_research_price_history.py",
+      "reason": "test retained in clean suite"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_research_report_contract.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_research_workflow.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "MIGRATED",
+      "path": "tests/test_runtime_trust.py",
+      "reason": "test retained in clean suite"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_runtime_trust_integration.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_saudi_deferred_design.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_schemas.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_secret_guard.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_source_access_executor.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_source_access_recipes.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_source_evidence_lifecycle.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_source_fallback.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_source_network.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_source_network_hardening.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_source_orchestrator.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_source_parsers.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_source_quality.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_source_quality_adversarial.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "MIGRATED",
+      "path": "tests/test_source_resilience.py",
+      "reason": "test retained in clean suite"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_status_corporate_import.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "MIGRATED",
+      "path": "tests/test_status_corporate_parsers.py",
+      "reason": "test retained in clean suite"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_status_corporate_workspace.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "MIGRATED",
+      "path": "tests/test_status_history.py",
+      "reason": "test retained in clean suite"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_status_history_import.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_status_history_workspace.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_stopgates_evaluation.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "MIGRATED",
+      "path": "tests/test_temporal_validation.py",
+      "reason": "test retained in clean suite"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_tri_security_admission.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_tri_security_lineage.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_tri_security_pilot.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_tri_security_receipts.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_user_price_export.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_WITH_LEGACY_COMPONENT",
+      "path": "tests/test_vendor_symbol_mapping.py",
+      "reason": "test targets an excluded component or fixture"
+    },
+    {
+      "disposition": "EXCLUDED_NON_RUNTIME_ARTIFACT",
+      "path": "workouts/2026-08-27/blind-test-report.md",
+      "reason": "fixture, research note, workout, artifact, or legacy skill"
+    },
+    {
+      "disposition": "EXCLUDED_NON_RUNTIME_ARTIFACT",
+      "path": "workouts/2026-08-27/collection-report.md",
+      "reason": "fixture, research note, workout, artifact, or legacy skill"
+    },
+    {
+      "disposition": "EXCLUDED_NON_RUNTIME_ARTIFACT",
+      "path": "workouts/2026-08-27/delta-preflight-issue-24.md",
+      "reason": "fixture, research note, workout, artifact, or legacy skill"
+    },
+    {
+      "disposition": "EXCLUDED_NON_RUNTIME_ARTIFACT",
+      "path": "workouts/2026-08-27/improvements.md",
+      "reason": "fixture, research note, workout, artifact, or legacy skill"
+    },
+    {
+      "disposition": "EXCLUDED_NON_RUNTIME_ARTIFACT",
+      "path": "workouts/2026-08-27/live-analysis.md",
+      "reason": "fixture, research note, workout, artifact, or legacy skill"
+    },
+    {
+      "disposition": "EXCLUDED_NON_RUNTIME_ARTIFACT",
+      "path": "workouts/2026-08-27/logs/README.md",
+      "reason": "fixture, research note, workout, artifact, or legacy skill"
+    },
+    {
+      "disposition": "EXCLUDED_NON_RUNTIME_ARTIFACT",
+      "path": "workouts/2026-08-27/metrics-after.json",
+      "reason": "fixture, research note, workout, artifact, or legacy skill"
+    },
+    {
+      "disposition": "EXCLUDED_NON_RUNTIME_ARTIFACT",
+      "path": "workouts/2026-08-27/metrics-before.json",
+      "reason": "fixture, research note, workout, artifact, or legacy skill"
+    },
+    {
+      "disposition": "EXCLUDED_NON_RUNTIME_ARTIFACT",
+      "path": "workouts/2026-08-27/plan.md",
+      "reason": "fixture, research note, workout, artifact, or legacy skill"
+    },
+    {
+      "disposition": "EXCLUDED_NON_RUNTIME_ARTIFACT",
+      "path": "workouts/2026-08-27/preflight.md",
+      "reason": "fixture, research note, workout, artifact, or legacy skill"
+    },
+    {
+      "disposition": "EXCLUDED_NON_RUNTIME_ARTIFACT",
+      "path": "workouts/2026-08-27/problems.md",
+      "reason": "fixture, research note, workout, artifact, or legacy skill"
+    },
+    {
+      "disposition": "EXCLUDED_NON_RUNTIME_ARTIFACT",
+      "path": "workouts/2026-08-27/rights-aware-backfill-report.md",
+      "reason": "fixture, research note, workout, artifact, or legacy skill"
+    },
+    {
+      "disposition": "EXCLUDED_NON_RUNTIME_ARTIFACT",
+      "path": "workouts/2026-08-27/run-manifest.json",
+      "reason": "fixture, research note, workout, artifact, or legacy skill"
+    },
+    {
+      "disposition": "EXCLUDED_NON_RUNTIME_ARTIFACT",
+      "path": "workouts/2026-08-27/saudi-review-deferred.md",
+      "reason": "fixture, research note, workout, artifact, or legacy skill"
+    },
+    {
+      "disposition": "EXCLUDED_NON_RUNTIME_ARTIFACT",
+      "path": "workouts/2026-08-27/sources.md",
+      "reason": "fixture, research note, workout, artifact, or legacy skill"
+    },
+    {
+      "disposition": "EXCLUDED_NON_RUNTIME_ARTIFACT",
+      "path": "workouts/2026-08-27/training-report.md",
+      "reason": "fixture, research note, workout, artifact, or legacy skill"
+    },
+    {
+      "disposition": "EXCLUDED_NON_RUNTIME_ARTIFACT",
+      "path": "workouts/2026-08-27/validation-report.md",
+      "reason": "fixture, research note, workout, artifact, or legacy skill"
+    }
+  ],
+  "legacy_head": "8860989f6a2affdc66bc790f639757c9a897f353",
+  "legacy_repository": "mohsamir7122/ku-bo",
+  "schema_version": "1.0",
+  "tracked_file_count": 509
+}

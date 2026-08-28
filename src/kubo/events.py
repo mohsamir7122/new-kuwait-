@@ -42,7 +42,12 @@ def event_from_dict(row: dict[str, Any], *, manifest_hashes: frozenset[str]) -> 
     relation = str(row.get("relation_type", "STANDALONE")).upper()
     if role not in SOURCE_ROLES or relation not in RELATION_TYPES:
         raise ValueError("invalid source_role or relation_type")
-    original = str(row.get("original_event_id", "")).strip() or None
+    original_value = row.get("original_event_id")
+    original = (
+        None
+        if original_value is None
+        else str(original_value).strip() or None
+    )
     if relation in {"SUPPLEMENTARY", "CORRECTIVE", "REPUBLISHED"} and not original:
         raise ValueError("dependent event requires original_event_id")
     novelty = float(row.get("novelty", 0.0))

@@ -32,3 +32,11 @@ jobs:
         env:
           PYTHONPATH: src
         run: python -m kubo self-check
+      - name: Example end-to-end analysis
+        run: |
+          example_root=$(mktemp -d)
+          kubo-core analyze-local \
+            --bundle examples/local_bundle \
+            --output "$example_root/result" \
+            > "$example_root/stdout.json"
+          python -c 'import json,sys; report=json.load(open(sys.argv[1], encoding="utf-8")); assert report["status"] == "PASS_RESEARCH_SUMMARY"; assert report["claim_boundaries"]["recommendation"] is False' "$example_root/stdout.json"

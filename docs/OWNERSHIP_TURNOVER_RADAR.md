@@ -53,9 +53,12 @@
 - `issued_shares`
 - `free_float_shares` عندما تتوافر
 - `as_of`
+- `first_available_at`
+- `captured_at`
 - بصمات Evidence قابلة للحل داخل الـManifest
 
-لا يجوز أن يتجاوز `free_float_shares` عدد الأسهم المصدرة، ولا يجوز استخدام
+لا يجوز استخدام Snapshot بتاريخ اقتصادي سابق إذا لم تكن متاحة عند `decision_at`،
+ولا يجوز أن يسبق `captured_at` وقت الإتاحة. كما لا يجوز أن يتجاوز `free_float_shares` عدد الأسهم المصدرة، ولا يجوز استخدام
 لقطة Capital Structure أصبحت متاحة بعد `decision_at`.
 
 ### Ownership Events
@@ -92,7 +95,9 @@
 
 ### Current Session Snapshot
 
-اللقطة الاختيارية تدعم:
+اللقطة الاختيارية تخص `CONTINUOUS_TRADING` أو `CLOSING_AUCTION` أو `CLOSED`.
+بيانات ما قبل الافتتاح ومزاد الافتتاح تحتاج عقدًا منفصلًا ولا تُحشر داخل OHLC.
+وهي تدعم:
 
 - `market_phase`
 - `previous_close_fils`
@@ -104,7 +109,7 @@
 - `turnover_kwd`
 - `trade_count`
 - إجمالي حجم وقيمة السوق عند التوقيت نفسه
-- عائد السوق والقطاع
+- عائد السوق والقطاع بوحدة `DECIMAL_FRACTION`
 - `available_at` و`captured_at`
 
 يرفض الرادار اللقطة إذا:
@@ -180,6 +185,16 @@
 - `NEGATIVE_CONTINUATION_STRUCTURE`
 - `NOT_APPLICABLE`
 
+## وحدات القياس والإصدار
+
+كل المخرجات تحمل `method_id=ownership_turnover_radar_v1` ونسخة Machine-readable
+من Thresholds. نسب Turnover وBlock Size والعوائد تُكتب بوحدة
+`DECIMAL_FRACTION`، بينما تغير الملكية يُكتب بوحدة `PERCENTAGE_POINTS`. لا تُسمى
+Ratio بأنها Percent من دون تحويلها، منعًا لالتباس 0.25 مع 25.
+
+اللقطة أثناء التداول تحمل `snapshot_finality=PROVISIONAL_INTRADAY`، أما لقطة
+`CLOSED` فتحمل `FINAL_SESSION`.
+
 ## لا يوجد Composite Score
 
 لا تنتج الوحدة درجة واحدة تسمح لعامل قوي بإخفاء بوابة فاشلة. تعرض كل Component
@@ -194,7 +209,7 @@
 
 ## اختبارات Regression
 
-تغطي الاختبارات الحالية:
+تغطي الاختبارات الحالية اثنتي عشرة حالة:
 
 1. سلسلة تخفيض ملكية ودوران مرتفع قبل ظهور اتجاه.
 2. منع Backfill لصفقة لم تكن منشورة عند نقطة القرار التاريخية.
@@ -203,7 +218,11 @@
 5. رفض حجم سهم يتجاوز إجمالي حجم السوق.
 6. عدم تسوية نسخ Event متعارضة صامتًا.
 7. عدم تصنيف شراء Insider على أنه Supply.
-8. ترتيب Full-universe من دون Watchlist Anchoring.
+8. رفض Capital Structure لم تكن متاحة عند وقت القرار.
+9. كشف فجوات Ownership Timeline من دون إسقاط التنبيه الصحيح.
+10. وسم لقطة الجلسة أثناء التداول بأنها Provisional.
+11. ترتيب Full-universe من دون Watchlist Anchoring.
+12. منع تجميع Block Trades من أيام مختلفة وكأنها صفقة سيطرة واحدة.
 
 ## المرحلة التالية
 

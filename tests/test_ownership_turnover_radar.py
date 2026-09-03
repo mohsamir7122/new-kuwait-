@@ -31,6 +31,8 @@ def capital(decision_at: str):
             "issued_shares": 119_730_000,
             "free_float_shares": 80_160_000,
             "as_of": ts("2026-06-30"),
+            "first_available_at": ts("2026-07-01"),
+            "captured_at": ts("2026-07-01"),
             "evidence_hashes": [HASH_A],
         },
         manifest_hashes=MANIFEST,
@@ -39,8 +41,8 @@ def capital(decision_at: str):
 
 
 def bars():
-    # Nineteen Kuwait trading sessions through 26 August 2026. The final five
-    # reproduce a high-turnover cluster without using later outcomes.
+    # Nineteen Kuwait trading sessions through 26 August 2026.  The final
+    # five reproduce a high-turnover cluster without using later outcomes.
     sessions = []
     cursor = date(2026, 8, 1)
     while cursor <= date(2026, 8, 26):
@@ -89,9 +91,9 @@ def bars():
         87.5,
         86.5,
     ]
-    output = []
+    out = []
     for session, volume, close in zip(sessions, volumes, closes):
-        output.append(
+        out.append(
             historical_bar_from_dict(
                 {
                     "security_code": "657",
@@ -106,7 +108,7 @@ def bars():
                 manifest_hashes=MANIFEST,
             )
         )
-    return output
+    return out
 
 
 def event(
@@ -153,12 +155,14 @@ class OwnershipTurnoverRadarTests(unittest.TestCase):
         events = [
             event(
                 event_id="major-1",
+                holder_id="major-holder-a",
                 first_available_at=ts("2026-04-28", 9),
                 previous_pct=19.987,
                 current_pct=17.836,
             ),
             event(
                 event_id="major-2",
+                holder_id="major-holder-b",
                 first_available_at=ts("2026-06-04", 9),
                 previous_pct=18.921,
                 current_pct=14.463,
@@ -257,8 +261,8 @@ class OwnershipTurnoverRadarTests(unittest.TestCase):
                 "trade_count": 3000,
                 "market_total_volume": 342_500_000,
                 "market_total_turnover_kwd": 76_700_000,
-                "market_return_pct": -0.0042,
-                "sector_return_pct": 0.01,
+                "market_return_fraction": -0.0042,
+                "sector_return_fraction": 0.01,
                 "available_at": ts("2026-09-02", 13),
                 "captured_at": ts("2026-09-02", 13),
                 "evidence_hash": HASH_D,
@@ -313,8 +317,8 @@ class OwnershipTurnoverRadarTests(unittest.TestCase):
                 "trade_count": 5000,
                 "market_total_volume": 421_000_000,
                 "market_total_turnover_kwd": 97_000_000,
-                "market_return_pct": -0.0021,
-                "sector_return_pct": 0.003,
+                "market_return_fraction": -0.0021,
+                "sector_return_fraction": 0.003,
                 "available_at": ts("2026-09-03", 13),
                 "captured_at": ts("2026-09-03", 13),
                 "evidence_hash": HASH_D,
@@ -359,8 +363,8 @@ class OwnershipTurnoverRadarTests(unittest.TestCase):
                     "trade_count": 100,
                     "market_total_volume": 1_000_000,
                     "market_total_turnover_kwd": 500_000,
-                    "market_return_pct": 0,
-                    "sector_return_pct": 0,
+                    "market_return_fraction": 0,
+                    "sector_return_fraction": 0,
                     "available_at": ts("2026-09-03", 10),
                     "captured_at": ts("2026-09-03", 10),
                     "evidence_hash": HASH_D,
@@ -439,6 +443,97 @@ class OwnershipTurnoverRadarTests(unittest.TestCase):
             "INSIDER_OR_AFFILIATE_SUPPLY_CLUSTER", report["reason_codes"]
         )
 
+    def test_capital_structure_available_after_decision_is_rejected(self) -> None:
+        decision_at = ts("2026-08-30", 8)
+        with self.assertRaisesRegex(ValueError, "not available at decision_at"):
+            capital_structure_from_dict(
+                {
+                    "security_code": "657",
+                    "issued_shares": 119_730_000,
+                    "free_float_shares": 80_160_000,
+                    "as_of": ts("2026-06-30"),
+                    "first_available_at": ts("2026-09-01"),
+                    "captured_at": ts("2026-09-01"),
+                    "evidence_hashes": [HASH_A],
+                },
+                manifest_hashes=MANIFEST,
+                decision_at=decision_at,
+            )
+
+    def test_ownership_timeline_gap_is_exposed_without_hiding_the_alert(self) -> None:
+        decision_at = ts("2026-08-30", 8)
+        events = [
+            event(
+                event_id="holder-step-1",
+                holder_id="same-holder",
+                first_available_at=ts("2026-04-28", 9),
+                previous_pct=20,
+                current_pct=18,
+            ),
+            event(
+                event_id="holder-step-2",
+                holder_id="same-holder",
+                first_available_at=ts("2026-06-04", 9),
+                previous_pct=16,
+                current_pct=13,
+            ),
+        ]
+        report = analyze_ownership_turnover(
+            security_code="657",
+            ticker="FUTUREKID",
+            decision_at=decision_at,
+            capture_mode="HISTORICAL_POINT_IN_TIME",
+            capital_structure=capital(decision_at),
+            ownership_events=events,
+            historical_bars=bars(),
+        )
+        self.assertEqual(report["research_status"], "HIGH_PRIORITY_WATCH")
+        self.assertEqual(report["evidence_status"], "PARTIAL")
+        self.assertEqual(
+            report["metrics"]["ownership_timeline_discontinuity_count_180d"], 1
+        )
+        self.assertIn("OWNERSHIP_TIMELINE_DISCONTINUITY", report["reason_codes"])
+
+    def test_intraday_snapshot_is_explicitly_provisional(self) -> None:
+        decision_at = ts("2026-09-02", 10)
+        snapshot = session_snapshot_from_dict(
+            {
+                "security_code": "657",
+                "session_date": "2026-09-02",
+                "market_phase": "CONTINUOUS_TRADING",
+                "previous_close_fils": 90,
+                "open_fils": 100,
+                "high_fils": 120,
+                "low_fils": 98,
+                "last_fils": 118,
+                "volume": 20_000_000,
+                "turnover_kwd": 2_200_000,
+                "trade_count": 1000,
+                "market_total_volume": 80_000_000,
+                "market_total_turnover_kwd": 20_000_000,
+                "market_return_fraction": 0,
+                "sector_return_fraction": 0,
+                "available_at": ts("2026-09-02", 10),
+                "captured_at": ts("2026-09-02", 10),
+                "evidence_hash": HASH_D,
+            },
+            manifest_hashes=MANIFEST,
+        )
+        report = analyze_ownership_turnover(
+            security_code="657",
+            ticker="FUTUREKID",
+            decision_at=decision_at,
+            capture_mode="HISTORICAL_POINT_IN_TIME",
+            capital_structure=capital(decision_at),
+            ownership_events=[],
+            historical_bars=bars(),
+            session_snapshot=snapshot,
+        )
+        self.assertEqual(
+            report["components"]["snapshot_finality"], "PROVISIONAL_INTRADAY"
+        )
+        self.assertIn("INTRADAY_SNAPSHOT_PROVISIONAL", report["reason_codes"])
+
     def test_universe_scan_ranks_all_cases_without_a_watchlist(self) -> None:
         decision_at = ts("2026-08-30", 8)
         high_case = {
@@ -463,6 +558,8 @@ class OwnershipTurnoverRadarTests(unittest.TestCase):
                 "issued_shares": 1_000_000_000,
                 "free_float_shares": 800_000_000,
                 "as_of": ts("2026-06-30"),
+                "first_available_at": ts("2026-07-01"),
+                "captured_at": ts("2026-07-01"),
                 "evidence_hashes": [HASH_A],
             },
             manifest_hashes=MANIFEST,
@@ -499,6 +596,49 @@ class OwnershipTurnoverRadarTests(unittest.TestCase):
         self.assertEqual(results[0]["ticker"], "FUTUREKID")
         self.assertEqual(results[0]["investigation_rank"], 1)
         self.assertEqual(results[1]["research_status"], "ABSTAIN")
+
+    def test_separate_block_trade_days_do_not_form_one_control_cluster(self) -> None:
+        decision_at = ts("2026-08-30", 14)
+        first = event(
+            event_id="block-day-1",
+            event_type="BLOCK_TRADE",
+            first_available_at=ts("2026-08-20", 9),
+            holder_id=None,
+            holder_role="UNKNOWN",
+            previous_pct=None,
+            current_pct=None,
+            shares=8_000_000,
+        )
+        second = event(
+            event_id="block-day-2",
+            event_type="BLOCK_TRADE",
+            first_available_at=ts("2026-08-25", 9),
+            holder_id=None,
+            holder_role="UNKNOWN",
+            previous_pct=None,
+            current_pct=None,
+            shares=8_000_000,
+        )
+        report = analyze_ownership_turnover(
+            security_code="657",
+            ticker="FUTUREKID",
+            decision_at=decision_at,
+            capture_mode="HISTORICAL_POINT_IN_TIME",
+            capital_structure=capital(decision_at),
+            ownership_events=[first, second],
+            historical_bars=bars(),
+        )
+        self.assertEqual(report["metrics"]["block_shares_180d"], 16_000_000)
+        self.assertEqual(
+            report["metrics"]["max_block_cluster_shares_180d"], 8_000_000
+        )
+        self.assertNotEqual(
+            report["components"]["ownership_event"],
+            "CONFIRMED_CONTROL_RELEVANT_EVENT",
+        )
+        self.assertNotIn(
+            "MATERIAL_BLOCK_GE_10PCT_ISSUED", report["reason_codes"]
+        )
 
 
 if __name__ == "__main__":

@@ -87,10 +87,12 @@ Actions`، التحليل الوصفي، وربط الأدلة.
 كما تضيف `scan_ownership_turnover_universe` لترتيب جميع الأوراق المتاحة وفق
 أولوية التحقيق، لا وفق قائمة أسماء يدوية. ويظل الترتيب بحثيًا لا استثماريًا.
 
-أضيفت ثمانية اختبارات Regression تغطي حالة ما قبل الحدث، ومنع إدخال إفصاح لاحق
+أضيف اثنا عشر اختبار Regression تغطي حالة ما قبل الحدث، ومنع إدخال إفصاح لاحق
 في قرار أقدم، وتأكيد Block Trade بحركة Price/Volume، وخطر التراجع من القمة،
 والبيانات الحسابية المستحيلة، وتعارض النسخ، والتمييز بين شراء Insider وبيعه،
-وفحص Full-universe من دون `Watchlist Anchoring`.
+ووقت إتاحة Capital Structure، وفجوات Ownership Timeline، ونهائية لقطة الجلسة،
+وفحص Full-universe من دون `Watchlist Anchoring`، ومنع جمع Block Trades
+من أيام مختلفة داخل Control cluster واحدة.
 
 النسخة `0.4.0` لا تضيف Collector أو `Backtest` أو احتمالًا أو توصية أو سعر دخول.
 كل مخرج يثبت `trade_eligibility=BLOCKED` ويفصح عن حدود الادعاء.

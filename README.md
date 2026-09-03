@@ -5,7 +5,7 @@
 
 ## الحالة الحالية
 
-النسخة `0.3.1` هي `Clean Core` تعمل دون شبكة ودون بيانات خاصة. وتشمل:
+النسخة `0.4.0` هي `Clean Core` تعمل دون شبكة ودون بيانات خاصة. وتشمل:
 
 - ربط الهوية باستخدام `security_code` وفترات صلاحية مؤرخة.
 - تطبيع الأحداث وبناء خصائص `Point-in-Time` مع منع `Look-ahead Leakage`.
@@ -20,6 +20,9 @@
 - سياسة مضبوطة لمقاومة أعطال المصادر، وسجل ثقة موثّق باستخدام `HMAC-SHA256`.
 - مسار `analyze-local` متكامل يتحقق من ملفات الأدلة وبصماتها قبل إنشاء ملخص
   بحثي وصفي ذرّي، دون اتصال بالشبكة أو توصية تداول.
+- `Ownership and Turnover Radar` يفصل تغيرات الملكية والصفقات المتفق عليها
+  ودوران `Free Float` وجودة الحركة السعرية إلى Components مستقلة، ويرتب السوق
+  كاملًا لأولوية التحقيق من دون `Composite Score` أو `Watchlist Anchoring`.
 
 لا تشمل هذه المرحلة جمعًا حيًا، أو نموذجًا تنبئيًا، أو `Backtest`، أو توصية، أو
 تنفيذ تداول. توجد هذه الحدود داخل ناتج الفحص الآلي نفسه، وليست ملاحظة تسويقية.
@@ -40,6 +43,20 @@ PYTHONPATH=src python -m kubo analyze-local \
 python -m pip install --no-deps --no-build-isolation .
 kubo-core self-check
 ```
+
+## Ownership and Turnover Radar
+
+الوحدة `kubo.ownership_turnover_radar` هي نواة بحثية Pure-Python تقبل Capital
+Structure مؤرخة، وسلسلة Ownership Events، وجلسات تاريخية، ولقطة جلسة اختيارية.
+وتنتج حالات مثل `HIGH_PRIORITY_WATCH`, `EVENT_CONFIRMED` و
+`ELEVATED_REVERSAL_RISK` مع إبقاء `trade_eligibility=BLOCKED`.
+
+تتحقق الوحدة من Point-in-Time availability، وبصمات Evidence، واتساق OHLC،
+واتساق Volume/Turnover، وعدم تجاوز بيانات السهم إجمالي السوق. كما تمنع
+التعارضات بين نسخ Event من أن تُسوّى صامتًا.
+
+التفاصيل والـThresholds وحدود الادعاء في
+[وثيقة الرادار](docs/OWNERSHIP_TURNOVER_RADAR.md).
 
 ## سياسة الاختبار العملية
 

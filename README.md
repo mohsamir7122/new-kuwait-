@@ -23,6 +23,9 @@
 - `Ownership and Turnover Radar` يفصل تغيرات الملكية والصفقات المتفق عليها
   ودوران `Free Float` وجودة الحركة السعرية إلى Components مستقلة، ويرتب السوق
   كاملًا لأولوية التحقيق من دون `Composite Score` أو `Watchlist Anchoring`.
+- `Multi-Source Claim Aggregation` تجمع Observations داخل الذاكرة من مصادر
+  مستقلة، وتفصل الاتفاق والتعارض والبيانات المقفلة والمعلومات المستنتجة، من دون
+  كتابة Local أو Drive ومن دون ملء صامت للفجوات.
 
 لا تشمل هذه المرحلة جمعًا حيًا، أو نموذجًا تنبئيًا، أو `Backtest`، أو توصية، أو
 تنفيذ تداول. توجد هذه الحدود داخل ناتج الفحص الآلي نفسه، وليست ملاحظة تسويقية.
@@ -57,6 +60,21 @@ Structure مؤرخة، وسلسلة Ownership Events، وجلسات تاريخي
 
 التفاصيل والـThresholds وحدود الادعاء في
 [وثيقة الرادار](docs/OWNERSHIP_TURNOVER_RADAR.md).
+
+## Multi-Source Claim Aggregation
+
+الوحدة `kubo.multi_source_aggregation` ليست Collector ولا قاعدة بيانات. تستقبل
+Observations من Investing أو مزود مرخص أو موقع الشركة أو مصدر سياقي، ثم تطبق
+بوابات Legal access وSemantic completeness وTimestamp وSession وUnit قبل
+المصالحة.
+
+تمنع الوحدة عدّ نسختين صحفيتين عن الإفصاح نفسه كمصدرين مستقلين، وترفض القيم
+المقفلة أو المقنّعة، وتحفظ Conflict بدل اختيار رقم عشوائي. ويمكنها إرفاق
+`ProposedInference` معلّمة بالمنهج والافتراضات والثقة، لكن الـInference لا تدخل
+في Facts ولا تصبح صالحة للتنفيذ.
+
+التفاصيل في
+[وثيقة التجميع متعدد المصادر](docs/MULTI_SOURCE_AGGREGATION.md).
 
 ## سياسة الاختبار العملية
 

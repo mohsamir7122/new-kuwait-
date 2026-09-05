@@ -20,6 +20,7 @@ CORE_CAPABILITIES = (
     "local_evidence_bundle_analysis",
     "official_data_parsing",
     "outcome_evidence_validation",
+    "ownership_turnover_event_radar",
     "point_in_time_event_features",
     "portfolio_state_validation",
     "research_price_history_validation",

@@ -5,7 +5,7 @@
 
 ## الحالة الحالية
 
-النسخة `0.3.1` هي `Clean Core` تعمل دون شبكة ودون بيانات خاصة. وتشمل:
+النسخة `0.4.0` هي `Clean Core` تعمل دون شبكة ودون بيانات خاصة. وتشمل:
 
 - ربط الهوية باستخدام `security_code` وفترات صلاحية مؤرخة.
 - تطبيع الأحداث وبناء خصائص `Point-in-Time` مع منع `Look-ahead Leakage`.
@@ -20,6 +20,12 @@
 - سياسة مضبوطة لمقاومة أعطال المصادر، وسجل ثقة موثّق باستخدام `HMAC-SHA256`.
 - مسار `analyze-local` متكامل يتحقق من ملفات الأدلة وبصماتها قبل إنشاء ملخص
   بحثي وصفي ذرّي، دون اتصال بالشبكة أو توصية تداول.
+- `Ownership and Turnover Radar` يفصل تغيرات الملكية والصفقات المتفق عليها
+  ودوران `Free Float` وجودة الحركة السعرية إلى Components مستقلة، ويرتب السوق
+  كاملًا لأولوية التحقيق من دون `Composite Score` أو `Watchlist Anchoring`.
+- `Multi-Source Claim Aggregation` تجمع Observations داخل الذاكرة من مصادر
+  مستقلة، وتفصل الاتفاق والتعارض والبيانات المقفلة والمعلومات المستنتجة، من دون
+  كتابة Local أو Drive ومن دون ملء صامت للفجوات.
 
 لا تشمل هذه المرحلة جمعًا حيًا، أو نموذجًا تنبئيًا، أو `Backtest`، أو توصية، أو
 تنفيذ تداول. توجد هذه الحدود داخل ناتج الفحص الآلي نفسه، وليست ملاحظة تسويقية.
@@ -40,6 +46,35 @@ PYTHONPATH=src python -m kubo analyze-local \
 python -m pip install --no-deps --no-build-isolation .
 kubo-core self-check
 ```
+
+## Ownership and Turnover Radar
+
+الوحدة `kubo.ownership_turnover_radar` هي نواة بحثية Pure-Python تقبل Capital
+Structure مؤرخة، وسلسلة Ownership Events، وجلسات تاريخية، ولقطة جلسة اختيارية.
+وتنتج حالات مثل `HIGH_PRIORITY_WATCH`, `EVENT_CONFIRMED` و
+`ELEVATED_REVERSAL_RISK` مع إبقاء `trade_eligibility=BLOCKED`.
+
+تتحقق الوحدة من Point-in-Time availability، وبصمات Evidence، واتساق OHLC،
+واتساق Volume/Turnover، وعدم تجاوز بيانات السهم إجمالي السوق. كما تمنع
+التعارضات بين نسخ Event من أن تُسوّى صامتًا.
+
+التفاصيل والـThresholds وحدود الادعاء في
+[وثيقة الرادار](docs/OWNERSHIP_TURNOVER_RADAR.md).
+
+## Multi-Source Claim Aggregation
+
+الوحدة `kubo.multi_source_aggregation` ليست Collector ولا قاعدة بيانات. تستقبل
+Observations من Investing أو مزود مرخص أو موقع الشركة أو مصدر سياقي، ثم تطبق
+بوابات Legal access وSemantic completeness وTimestamp وSession وUnit قبل
+المصالحة.
+
+تمنع الوحدة عدّ نسختين صحفيتين عن الإفصاح نفسه كمصدرين مستقلين، وترفض القيم
+المقفلة أو المقنّعة، وتحفظ Conflict بدل اختيار رقم عشوائي. ويمكنها إرفاق
+`ProposedInference` معلّمة بالمنهج والافتراضات والثقة، لكن الـInference لا تدخل
+في Facts ولا تصبح صالحة للتنفيذ.
+
+التفاصيل في
+[وثيقة التجميع متعدد المصادر](docs/MULTI_SOURCE_AGGREGATION.md).
 
 ## سياسة الاختبار العملية
 
